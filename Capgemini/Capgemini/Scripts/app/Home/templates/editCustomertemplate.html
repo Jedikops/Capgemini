@@ -1,0 +1,43 @@
+﻿<form name="vm.form" ng-submit="vm.update()" ng-init="vm.load()">
+    <fieldset ng-disabled="vm.saving">
+        <div class="modal-header">
+            <h3 class="modal-title">Edit customer</h3>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-info" ng-hide="vm.errorMessage != null">
+                Enter details for the new customer below.
+            </div>
+            <div class="alert alert-danger" ng-show="vm.errorMessage != null">
+                {{vm.errorMessage}}
+            </div>
+
+            <div class="form-group has-feedback">
+                <label class="control-label" for="Firstname">First Name</label>
+                <input required ng-model="vm.customer.FirstName"
+                       class="form-control" name="Firstname" type="text" placeholder="Firstname (ex: John)" />
+            </div>
+
+            <div class="form-group has-feedback">
+                <label class="control-label" for="Surname">Surname</label>
+                <input required ng-model="vm.customer.SurName"
+                       class="form-control" name="Surname" type="text" placeholder="Surname (ex: SMith)" />
+            </div>
+
+            <div class="form-group has-feedback">
+                <label class="control-label" for="PhoneNumber">Phone number</label>
+                <input required ng-model="vm.customer.PhoneNumber"
+                       class="form-control" name="PhoneNumber" type="text" placeholder="Phonenumber (ex: +48536909276)" />
+            </div>
+
+            <div class="form-group has-feedback">
+                <label class="control-label" for="Addres">Address</label>
+                <textarea required ng-model="vm.customer.Address"
+                          class="form-control" name="Address" type="text" placeholder="Address (ex: Mogliska 125 Cracow Poland)" />
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success">Save</button>
+                <button type="button" class="btn btn-danger" ng-click="$dismiss()">Cancel</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

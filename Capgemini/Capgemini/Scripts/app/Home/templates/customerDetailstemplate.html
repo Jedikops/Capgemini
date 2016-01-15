@@ -1,0 +1,20 @@
+﻿<div class="panel panel-default">
+    <table class="table table-striped table-hover">
+        <tr class=" info text-center">
+        <td colspan="4">
+            Customers
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="pull-left text-info text-center">{{vm.customer.FirstName}} {{vm.customer.SurName}}</span>
+            </td>
+            <td >
+                <span class="pull-right">
+                    <button type="button" class="btn btn-warning" ng-click="vm.edit()">Edit</button>
+                    <button type="button" class="btn btn-danger" ng-click="vm.remove()">Delete</button>
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>

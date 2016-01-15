@@ -1,0 +1,9 @@
+﻿@model dynamic
+
+<div ng-controller="CustomerListController as vm">
+    <h1 class="page-header">Customers<a class="pull-right" href="" ng-click="vm.add()">New ++</a>
+    </h1>
+    <div>
+        <customer-details ng-repeat="customer in vm.customers" customer="customer" />
+    </div>
+</div>
